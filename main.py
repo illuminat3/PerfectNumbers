@@ -77,7 +77,6 @@ def init_state():
 
 def simulate_keypress(stop_signal):
     input("Press Enter to stop...")
-    git_commit_and_push("updated result and state")
     stop_signal['stop'] = True
 
 if __name__ == "__main__":
@@ -110,9 +109,12 @@ if __name__ == "__main__":
 
     stop_signal['stop'] = True
     periodic_commit_thread.join()
+    print ("Stopping")
 
     with open('state.json', 'w') as f:
         json.dump(state, f)
 
+    print("Update State")
+    
     git_commit_and_push("Final commit of results and state.")
     print("Search complete.")
