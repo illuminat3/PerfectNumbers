@@ -58,6 +58,8 @@ def search_perfect_numbers(start, step, lock, stop_signal, state):
                 with open('results.txt', 'a') as f:
                     f.write(f"{current}\n")
                 current = current * 2
+        else:
+            print (current)
         with lock:
             state['current'] = current
         current += step
