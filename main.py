@@ -81,7 +81,7 @@ def simulate_keypress(stop_signal):
     stop_signal['stop'] = True
 
 if __name__ == "__main__":
-   # pull_latest_files()
+    pull_latest_files()
     num_threads = 6
     threads = []
     lock = threading.Lock()
