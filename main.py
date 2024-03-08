@@ -77,6 +77,7 @@ def init_state():
 
 def simulate_keypress(stop_signal):
     input("Press Enter to stop...")
+    git_commit_and_push("updated result and state")
     stop_signal['stop'] = True
 
 if __name__ == "__main__":
